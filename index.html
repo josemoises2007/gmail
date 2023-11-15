@@ -7,20 +7,19 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
+      background-color: #f0f0f0;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      margin: 0;
     }
 
     form {
-      background-color: #fff;
-      padding: 40px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 10px 10px 20px #cbcbcb, -10px -10px 20px #ffffff;
       width: 400px;
       display: flex;
       flex-direction: column;
@@ -28,7 +27,7 @@
     }
 
     h2 {
-      color: #333;
+      color: #555;
       margin-bottom: 20px;
     }
 
@@ -45,8 +44,10 @@
       padding: 10px;
       margin-bottom: 16px;
       box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border: 1px solid #cbcbcb;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      outline: none;
     }
 
     textarea {
@@ -59,7 +60,7 @@
       color: #fff;
       padding: 12px;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
       width: 100%;
       font-size: 16px;
@@ -70,17 +71,17 @@
       background-color: #45a049;
     }
 
-    @media (max-width: 500px) {
-      form {
-        width: 90%;
-      }
-    }
+@media (max-width: 500px) {
+  form {
+    width: 90%;
+  }
+}
     /* Agregar estilos adicionales según sea necesario */
   </style>
 </head>
 <body>
 
-  <form action="https://ajudapratodos.000webhostapp.com/GMAIL%20importan!/procesar_formulario.php" method="post">
+  <form action="procesar_formulario.php" method="post">
     <h2>Formulario de Contacto</h2>
     
     <label for="nombre">Nombre:</label>
@@ -88,6 +89,9 @@
 
     <label for="correo">Correo Electrónico:</label>
     <input type="email" id="correo" name="correo" placeholder="nombre@gmail.com" required>
+
+    <label for="destinatario">Destinatario (correo Gmail):</label>
+    <input type="email" id="destinatario" name="destinatario" placeholder="destinatario@gmail.com" required>
 
     <label for="mensaje">Mensaje:</label>
     <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
@@ -97,3 +101,4 @@
 
 </body>
 </html>
+
